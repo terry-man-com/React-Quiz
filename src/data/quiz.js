@@ -1,0 +1,25 @@
+const quizData = [
+  {
+    question: "Question 1",
+    options: ["Select1", "Select2", "Select3", "Select4"],
+    answerIndex: 0
+  },{
+    question: "Question 2",
+    options: ["Select1", "Select2", "Select3", "Select4"],
+    answerIndex: 1
+  },{
+    question: "Question 3",
+    options: ["Select1", "Select2", "Select3", "Select4"],
+    answerIndex: 2
+  },{
+    question: "Question 4",
+    options: ["Select1", "Select2", "Select3", "Select4"],
+    answerIndex: 3
+  },{
+    question: "Question 5",
+    options: ["Select1", "Select2", "Select3", "Select4"],
+    answerIndex: 1
+  },
+];
+
+export default quizData
