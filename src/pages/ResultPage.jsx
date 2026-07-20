@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { ROUTES } from '../const';
 import Result from "../components/Result/Result";
 import { useEffect, useState } from "react";
@@ -7,12 +7,14 @@ import Loading from '../components/Loading/Loading';
 export default function ResultPage() {
     const [active, setActive] = useState(false);
     const location = useLocation();
-    const maxQuizLen = location.state.maxQuizLen
-    const correctNumLen = location.state.correctNumLen
+    const maxQuizLen = location.state?.maxQuizLen
+    const correctNumLen = location.state?.correctNumLen
+    const navigation = useNavigate();
 
     useEffect(() => {
+        if(!maxQuizLen || !correctNumLen) navigation(ROUTES.HOME)
         setTimeout(() => setActive(true), 3000);
-    }, [])
+    }, [correctNumLen, maxQuizLen, navigation]);
   return (
     <>
         <Loading active={active} />
