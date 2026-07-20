@@ -1,3 +1,12 @@
+@keyframes gakuburu {
+    50% {
+        transform: translateX(3px)
+    }
+    100% {
+        transform: translateY(-3px);
+    }
+}
+
 .loading {
     position: fixed;
     z-index: 999;
@@ -13,6 +22,9 @@
     color: aliceblue;
     transition: transform ease-in-out 0.5s;
 
+    >span {
+        animation: gakuburu 0.1s infinite
+    }
     &.isActive {
         transform: translateY(-100%);
     }
